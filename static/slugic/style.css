@@ -1,0 +1,60 @@
+@font-face {
+  font-family: b612mono;
+  src: url('fonts/B612Mono-Regular.ttf');
+}
+
+document, body {
+  height: 100dvh;
+  overflow: hidden;
+  margin: 0;
+}
+
+body {
+  --main-bg: #363538;
+  --footer-bg: #1d1d1d;
+  --border: #6b6b6d;
+  --text: #ddd;
+  --selected: #1eaec4;
+  --selected-middle: #1eaec422;
+
+  --wire-off: #321a1f;
+  --wire-on: #e7324b;
+
+  --gate-border-width: 3px;
+
+  position: relative;
+  margin: auto;
+
+  font-family: b612mono;
+  font-weight: 700;
+
+  background: var(--main-bg);
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: calc(var(--u) * 0.25);
+}
+
+
+/*
+The main board
+*/
+.main {
+  width: min(95dvw, calc((100dvh - var(--u) * 3.5) / 9 * 16));
+  aspect-ratio: 16 / 9;
+  border: 4px solid var(--border);
+}
+.head {
+  height: calc(var(--u) * 1);
+}
+.foot {
+  height: calc(var(--u) * 1.5);
+  background: var(--footer-bg);
+}
+.head *,
+.main *,
+.foot * {
+  box-sizing: border-box;
+}

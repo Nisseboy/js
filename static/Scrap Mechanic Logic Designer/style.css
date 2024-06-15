@@ -1,0 +1,129 @@
+:root {
+  --c-0: #eeeeee;
+  --c-1: #f5f071;
+  --c-2: #cbf66f;
+  --c-3: #68ff88;
+  --c-4: #7eeded;
+  --c-5: #4c6fe3;
+  --c-6: #ae79f0;
+  --c-7: #ee7bf0;
+  --c-8: #f06767;
+  --c-9: #eeaf5c;
+  --c-10: #7f7f7f;
+  --c-11: #e2db13;
+  --c-12: #a0ea00;
+  --c-13: #19e753;
+  --c-14: #2ce6e6;
+  --c-15: #0a3ee2;
+  --c-16: #7514ed;
+  --c-17: #cd11d2;
+  --c-18: #d02525;
+  --c-19: #df7f00;
+  --c-20: #4a4a4a;
+  --c-21: #817c00;
+  --c-22: #577d07;
+  --c-23: #0e8031;
+  --c-24: #118787;
+  --c-25: #0f2e91;
+  --c-26: #500aa6;
+  --c-27: #720a74;
+  --c-28: #7c0000;
+  --c-29: #673b00;
+  --c-30: #222222;
+  --c-31: #323000;
+  --c-32: #375000;
+  --c-33: #064023;
+  --c-34: #0a4444;
+  --c-35: #0a1d5a;
+  --c-36: #35086c;
+  --c-37: #520653;
+  --c-38: #560202;
+  --c-39: #472800;
+
+  --bbg: #232323;
+  --bg: #121212;
+  --grid-lines: #ffffff20;
+}
+¨
+html {
+  height: 100%;
+}
+body {
+  height: 100dvh;
+  background: var(--bbg);
+  overflow: hidden;
+
+  display: grid;
+  place-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.gates {
+  position: relative;
+  max-width: calc(100vw - 1rem);
+  width: calc((100vh - 1rem) / 9 * 16);
+  aspect-ratio: 16 / 9;
+  background: var(--bg);
+
+  background-image: 
+    linear-gradient(to right, var(--grid-lines) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-lines) 1px, transparent 1px);
+  background-size: var(--unit) var(--unit);
+
+  overflow: hidden;
+}
+.gate {
+  width: var(--unit);
+  aspect-ratio: 1 / 1;
+
+  position: absolute;
+  left: calc(var(--x, 0) * var(--unit));
+  top: calc(var(--y, 0) * var(--unit));
+  
+  background-color: var(--color, var(--c-19));
+  background-size: cover;
+}
+.gate.selected {
+  outline: 1px solid #dd0;
+  outline-offset: 1px;
+}
+.placing {
+  pointer-events: none;
+  opacity: 0.7;
+  position: absolute;
+}
+
+.color-selector {
+  width: 30vw;
+  aspect-ratio: 10 / 4;
+  background: var(--bg);
+
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  place-items: center;
+}
+.color-selector div {
+  width: 90%;
+  aspect-ratio: 1 / 1;
+}
+.color-selector.independent {
+  position: absolute;
+  z-index: 2;
+}
+
+.selection {
+  position: absolute;
+  left: calc(var(--x, 0) * var(--unit));
+  top: calc(var(--y, 0) * var(--unit));
+
+  width: calc((var(--x2, 0) - var(--x, 0)) * var(--unit));
+  height: calc((var(--y2, 0) - var(--y, 0)) * var(--unit));
+
+  border: 2px solid red;
+
+  pointer-events: none;
+}

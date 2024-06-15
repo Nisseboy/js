@@ -1,0 +1,5 @@
+variables:
+  local:
+    var = value
+  global:
+    g.var = value

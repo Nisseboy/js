@@ -1,0 +1,43 @@
+:root {
+  --foreground: rgb(215, 215, 205);
+  --background: rgb(40, 40, 50);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  height: 100%;
+  margin: auto;
+}
+
+.spriteArea {
+  position: absolute;
+  right: 0;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: var(--background)
+}
+
+.tab button {
+  background-color: var(--background);
+  color: var(--foreground);
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px, 0px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: #bbb;
+}
+
+.tab button.active {
+  background-color: var(--foreground);
+  color: var(--background);
+}

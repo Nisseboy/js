@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" style="height: 100%;">
+  <head>
+    <meta charset="utf-8">
+    <title>Scratch app builder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lib/codemirror.css">
+    <link rel="stylesheet" href="lib/ayu-mirage.css">
+    <script src="lib/codemirror.js"></script>
+  </head>
+  <body>
+    <button type="button" style="background-color: green;" onclick="createSprite(rand(10000)); showSprite();">+</button>
+    <div class="tab" style="width: 100%; height: 2%"></div>
+    <div class="codeArea" style="width: 49%; height: 90%; float: left">
+      <textarea class="code" rows="8" cols="80" onchange="codeChange(this)"></textarea>
+    </div>
+    <div class="spriteArea" style="width: 49%; height: 90%; float: left">
+      <table class="spriteSettings">
+        <tr>
+          <th>Sprite:</th>
+        </tr>
+      </table>
+      <table class="spriteCostumes">
+        <tr>
+          <th>Costumes:</th>
+        </tr>
+      </table>
+      <table class="spriteSounds">
+        <tr>
+          <th>Sounds:</th>
+        </tr>
+      </table>
+    </div>
+    <script src="codes.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

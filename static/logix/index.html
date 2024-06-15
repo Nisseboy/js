@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logix</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body draggable="false">
+  <main>
+    <svg class="wires">
+      <path class="wire preview" d="" />
+    </svg>
+    <h1 class="gate-title">Currently editing gate: 
+      <input wrap="off" class="gate-name"></input>
+    </h1>
+    <div class="io-rib left"></div>
+    <div class="io-rib right"></div>
+  </main>
+  <footer>
+  </footer>
+  <div class="selection" draggable="false"></div>
+  <div class="popup-screen"></div>
+  <div class="popup alert">
+    <div class="text">
+      Your doctor say yuo are dead, just sayin yknorh
+    </div>
+    <div class="buttons">
+      <button>Bruh</button>
+      <button>Okay</button>
+    </div>
+  </div>
+  <div class="popup confirm">
+    <div class="text">
+      Your doctor say yuo are dead, just sayin yknorh
+    </div>
+    <div class="buttons">
+      <button>No</button>
+      <button>Okay</button>
+    </div>
+  </div>
+  <div class="popup prompt">
+    <div class="text">
+      Your doctor say yuo are dead, just sayin yknorh
+    </div>
+    <input type="text">
+  </div>
+  <script src="popup.js"></script>
+  <script src="gate.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

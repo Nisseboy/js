@@ -1,0 +1,62 @@
+:root {
+  --background: rgb(48, 48, 48);
+  --foreground: rgb(60, 60, 60);
+
+  color: beige;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+
+  background-color: var(--background);
+}
+
+nav {
+  background-color: var(--foreground);
+  
+  font-size: 2rem;
+  text-align: center;
+  height: 2.5rem;
+}
+
+.cards {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  width: 16rem;
+  height: 18rem;
+
+  background-color: var(--foreground);
+
+  border-radius: 1rem;
+  border: 2px solid black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  margin: 1rem;
+
+  user-select: none;
+
+  transition-duration: 0.2s;
+}
+.card:hover {
+  translate: 0 1rem;
+  border: 2px solid red;
+}
+.card-icon {
+  max-width: 80%;
+  aspect-ratio: 1/1;
+
+  border-radius: 0.5rem;
+}
+.card-text {
+  font-size: 1.5rem;
+}

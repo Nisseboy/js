@@ -1,0 +1,9 @@
+:root {
+  --bg: #111111;
+}
+
+html, body {
+  background: var(--bg);
+  height: 100%;
+  overflow: hidden;
+}
